@@ -10,26 +10,17 @@ function calculator(string $expression): string
             return "incorrect";
         }
     }
-    for ($i = 0; $i < mb_strlen($expression); $i++) {
-        if (is_numeric($expression)) {
-
-            $numbers[$i] = $expression[$i];
-        }
-    }
 
     $counting = str_split($expression);
 
     $process = $counting[0];
 
 
-    for ($i = 1; $i < mb_strlen($expression); $i++) // сложение и вычитание
-    {
-        if ($counting[$i] === '+') // ищу символ '+'
-        {
-            $process = $process + $expression[$i + 1]; //складываю предыдущий элемент с элементом через 1
-        } elseif ($counting[$i] === '-') // ищу символ '-'
-        {
-            $process = $process - $expression[$i + 1]; //вычитаю из предыдущего элемента элемент через 1
+    for ($i = 1; $i < mb_strlen($expression); $i++) {
+        if ($counting[$i] === '+') {
+            $process = $process + $expression[$i + 1];
+        } elseif ($counting[$i] === '-') {
+            $process = $process - $expression[$i + 1];
         }
     }
     return $process;
