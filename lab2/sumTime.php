@@ -1,18 +1,17 @@
 <?php
-
 $time1 = $argv[1];
 $time2 = $argv[2];
 function sumTime(string $time1, string $time2): string
 {
     $correctString = ' :1234567890';
     for ($i = 0; $i < strlen($time1); $i++) {
-        if (!strpos($correctString, $time1[$i]) && strlen($time1) != 8) {
-            return 'введите 1 время, согласно примеру:"10:20:30"';
+        if (!strpos($correctString, $time1[$i]) || strlen($time1) != 8) {
+            return 'введите 1 время, согласно примеру:"10:20:30" или "01:05:30"';
         }
     }
     for ($i = 0; $i < strlen($time2); $i++) {
-        if (!strpos($correctString, $time2[$i]) && strlen($time2) != 8) {
-            return 'введите 2 время, согласно примеру:"10:20:30"';
+        if (!strpos($correctString, $time2[$i]) || strlen($time2) != 8) {
+            return 'введите 2 время, согласно примеру:"10:20:30" или "01:05:30"';
         }
     }
     $hour1 = mb_substr($time1, 0, 2);
