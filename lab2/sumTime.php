@@ -19,10 +19,8 @@ function sumTime(string $time1, string $time2): string
     $hour2 = mb_substr($time2, 0, 2);
     $hour2 = +$hour2;
     $sumHours = $hour1 + $hour2;
-    for (; $sumHours > 24;) {
-        if ($sumHours > 24) {
-            $sumHours = $sumHours - 24;
-        }
+    while ($sumHours > 24) {
+        $sumHours = $sumHours - 24;
     }
     $minute1 = mb_substr($time1, 3, 5);
     $minute1 = +$minute1;
