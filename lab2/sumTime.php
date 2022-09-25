@@ -1,7 +1,7 @@
 <?php
 
-$time1 = "06:10:10:2";
-$time2 = "20:30:50";
+$time1 = $argv[1];
+$time2 = $argv[2];
 function sumTime(string $time1, string $time2): string
 {
     $correctString = ' :1234567890';
