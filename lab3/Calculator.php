@@ -9,25 +9,25 @@ class Calculator
         $this->number = $number;
     }
 
-    public function sum($number): Calculator
+    public function sum($number): self
     {
         $this->number += $number;
         return $this;
     }
 
-    public function minus($number): Calculator
+    public function minus($number): self
     {
         $this->number -= $number;
         return $this;
     }
 
-    public function product($number): Calculator
+    public function product($number): self
     {
         $this->number *= $number;
         return $this;
     }
 
-    public function division($number): Calculator
+    public function division($number): self
     {
         $this->number /= $number;
         return $this;
