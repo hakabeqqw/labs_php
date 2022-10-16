@@ -2,52 +2,42 @@
 
 class Calculator
 {
-    public $number;
+    public int $number;
 
-    public function __construct(string $number)
+    public function __construct(int $number)
     {
         $this->number = $number;
     }
 
     public function sum($number)
     {
-        $expressionSum = "+" . $number;
-        return $expressionSum;
+        $this->number += $number;
+        return $this;
     }
 
     public function minus($number)
     {
-        $expressionMinus = "-" . $number;
-        return $expressionMinus;
+        $this->number -= $number;
+        return $this;
     }
 
     public function product($number)
     {
-        $expressionProduct = "*" . $number;
-        return $expressionProduct;
+        $this->number *= $number;
+        return $this;
     }
 
     public function division($number)
     {
-        $expressionDivision = "/" . $number;
-        return $expressionDivision;
+        $this->number /= $number;
+        return $this;
     }
 
     public function getResult()
     {
-        $result = $this->expressionSum . $this->expressionMinus . $this->expressionProduct . $this->expressionDivision;
-
-        if(!$this->expressionDivision)
-        {
-            return 0;
-        }
-        return $result;
+        return $this->number;
     }
 }
-
-$calculator = new Calculator();
-
-$calculator->sum(2);
-$calculator->sum(3);
-$calculator->product(4);
-echo $calculator->getResult();
+$calculator = new Calculator(0);
+$calculator->number;
+echo $calculator->sum(3)->sum(3)->product(4)->getResult();
