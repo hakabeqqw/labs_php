@@ -7,7 +7,7 @@ abstract class Snack
 	/** @var string[] $toppings */
 	public array $toppings;
 	public string $cutting;
-	
+
 
 	public function prepare(): void
 	{
