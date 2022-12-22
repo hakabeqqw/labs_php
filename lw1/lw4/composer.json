@@ -1,0 +1,19 @@
+{
+    "name": "makas/lw4",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Makas\\Lw4\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Max",
+            "email": "makasanmr300@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.9",
+        "phpunit/phpunit": "^9.5"
+    }
+}
