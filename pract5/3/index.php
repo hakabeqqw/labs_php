@@ -68,9 +68,7 @@
                             if ($equal > 0) {
                                 if ((int)substr($_POST['a'], $equal)  === $expression) {
                                     echo ("Верно");
-                                }
-                                else
-                                {
+                                } else {
                                     echo ("Неверно");
                                 }
                             } ?>
