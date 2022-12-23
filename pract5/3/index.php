@@ -64,7 +64,16 @@
                                     $expression = $expression ** $_POST['a'][$i + 2];
                                 }
                             }
-                            Результат: echo ($expression); ?>
+                            $equal = strpos($_POST['a'], '=') + 2;
+                            if ($equal > 0) {
+                                if ((int)substr($_POST['a'], $equal)  === $expression) {
+                                    echo ("Верно");
+                                }
+                                else
+                                {
+                                    echo ("Неверно");
+                                }
+                            } ?>
                         </div>
                     <?php endif; ?>
                 </div>
